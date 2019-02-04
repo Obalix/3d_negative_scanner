@@ -5,10 +5,21 @@ include <parts/Stage_35mm.scad>;
 include <parts/Stage_60mm.scad>;
 
 //cam_stand_base();
-//cam_stand_top();
+cam_stand_top();
 //scanner_rail_runner();
+//scanner_rail_runner_w_screw();
+//scanner_rail_extension();
+//stage_front();
+//stage_back();
 
-$fn=20;
+//rotate([90,0,0]) stage_front();
+//rotate([90,180,0]) stage_back();
+//rotate([90,180,0]) stage_60_front();
+//rotate([90,0,0]) stage_60_back();
+
+//rotate([0,180,0]) translate([0,0,-105]) stage_clamp();
+
+$fn=128;
 
 module scanner_rail_runner_w_screw() {
 	difference() {
@@ -41,23 +52,3 @@ module plate_holder() {
 		}
 	}
 }
-
-//scanner_rail();
-//scanner_rail_extension();
-//scanner_rail_runner();
-//scanner_rail_runner_w_screw();
-//scanner_rail_runner_screw();
-//stage_front();
-//stage_back();
-
-//translate([0,12.5,30]) {
-//	stage_front();
-//	stage_back();
-//}
-
-//rotate([90,0,0]) stage_front();
-//rotate([90,180,0]) stage_back();
-rotate([90,180,0]) stage_60_front();
-//rotate([90,0,0]) stage_60_back();
-
-//rotate([0,180,0]) translate([0,0,-105]) stage_clamp();
