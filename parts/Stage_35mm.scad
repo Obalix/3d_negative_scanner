@@ -1,5 +1,9 @@
 include <../lib/nutsnbolts/cyl_head_bolt.scad>
 
+//stage_front();
+//stage_back();
+//stage_clamp();
+
 module cut_outs() {
 	color("green", 0.8) {
 		translate([-41,-0.6,57.5]) {
@@ -7,8 +11,8 @@ module cut_outs() {
 		}
 	}
 	color("blue", 0.8) {
-		translate([-20,-3,55]) {
-			cube([40,6,40]);
+		translate([-24,-3,55]) {
+			cube([48,6,40]);
 		}
 	}
 	translate([-12.5,-4,10]) {
@@ -25,34 +29,34 @@ module cut_outs() {
 			}
 		}
 	}
-	translate([-29,-4,99.5]) {
-		color("red", 0.8) {
-			rotate([90,90,0]) {
-				hole_through(name="M4",l=10);
-			}
-		}
-	}
-	translate([29,-4,99.5]) {
-		color("red", 0.8) {
-			rotate([90,90,0]) {
-				hole_through(name="M4",l=10);
-			}
-		}
-	}
-	translate([-29,-4,50]) {
-		color("red", 0.8) {
-			rotate([90,90,0]) {
-				hole_through(name="M4",l=10);
-			}
-		}
-	}
-	translate([29,-4,50]) {
-		color("red", 0.8) {
-			rotate([90,90,0]) {
-				hole_through(name="M4",l=10);
-			}
-		}
-	}
+//	translate([-29,-4,99.5]) {
+//		color("red", 0.8) {
+//			rotate([90,90,0]) {
+//				hole_through(name="M4",l=10);
+//			}
+//		}
+//	}
+//	translate([29,-4,99.5]) {
+//		color("red", 0.8) {
+//			rotate([90,90,0]) {
+//				hole_through(name="M4",l=10);
+//			}
+//		}
+//	}
+//	translate([-29,-4,50]) {
+//		color("red", 0.8) {
+//			rotate([90,90,0]) {
+//				hole_through(name="M4",l=10);
+//			}
+//		}
+//	}
+//	translate([29,-4,50]) {
+//		color("red", 0.8) {
+//			rotate([90,90,0]) {
+//				hole_through(name="M4",l=10);
+//			}
+//		}
+//	}
 }
 
 module stage_front() {
@@ -62,23 +66,23 @@ module stage_front() {
 		}
 		cut_outs();
 	}
-	translate([-20,-2.4,55]) {
-		cube([40,4.8,2.4]);
+	translate([-24,-2.4,55.0]) {
+		cube([48,4.8,2.5]);
 	}
-	translate([-20,-2.4,92.7]) {
-		cube([40,4.8,2.4]);
+	translate([-24,-2.4,92.7]) {
+		cube([48,4.8,2.4]);
 	}
 	translate([-30,-2.4,57.4]) {
-		cube([60,1.8,0.4]);
+		cube([60,1.8,1.8]);
 	}
-	translate([-30,-2.4,92.3]) {
-		cube([60,1.8,0.4]);
+	translate([-30,-2.4,90.9]) {
+		cube([60,1.8,1.8]);
 	}
-	translate([-20,0.6,57.4]) {
-		cube([40,1.8,0.4]);
+	translate([-24,0.6,57.4]) {
+		cube([48,1.8,1.8]);
 	}
-	translate([-20,0.6,92.3]) {
-		cube([40,1.8,0.4]);
+	translate([-24,0.6,90.9]) {
+		cube([48,1.8,1.8]);
 	}
 }
 
@@ -106,10 +110,16 @@ module stage_back() {
 			cube([2.5,1.8,40]);
 		}
 		translate([-75,-2.4,57.5]) {
-			cube([40,1,2]);
+			cube([40,1.8,2]);
 		}
 		translate([-75,-2.4,91]) {
-			cube([40,1,2]);
+			cube([40,1.8,2]);
+		}
+		translate([-75,0.6,57.5]) {
+			cube([40,1.8,2]);
+		}
+		translate([-75,0.6,91]) {
+			cube([40,1.8,2]);
 		}
 	}
 	mirror() {	
@@ -129,10 +139,16 @@ module stage_back() {
 			cube([2.5,1.8,40]);
 		}
 		translate([-75,-2.4,57.5]) {
-			cube([40,1,2]);
+			cube([40,1.8,2]);
 		}
 		translate([-75,-2.4,91]) {
-			cube([40,1,2]);
+			cube([40,1.8,2]);
+		}
+		translate([-75,0.6,57.5]) {
+			cube([40,1.8,2]);
+		}
+		translate([-75,0.6,91]) {
+			cube([40,1.8,2]);
 		}
 	}
 }
@@ -148,7 +164,3 @@ module stage_clamp() {
 		cube([70,2,4]);
 	}
 }
-
-//stage_front();
-//stage_back();
-//stage_clamp();
